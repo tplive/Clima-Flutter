@@ -20,7 +20,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void getLocationData() async {
 
     var weatherData = await WeatherModel().getLocationWeather();
-
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -35,11 +34,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //getLocationData();
 
     return Scaffold(
       body: Center(
-          child: SpinKitChasingDots(
+          child: SpinKitCubeGrid(
         color: Colors.white,
         size: 100,
       )),
